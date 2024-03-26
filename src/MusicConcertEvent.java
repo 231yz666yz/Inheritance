@@ -6,7 +6,7 @@ public class MusicConcertEvent extends Event{
 
   
     public MusicConcertEvent(String eventID, String eventName, String eventLocation, String pointOfContact, int totalParticipants, int totalEventDays, double merchandiseCost) {
-        super(eventID, eventName, eventLocation, pointOfContact, totalParticipants, totalEventDays);
+        super(eventID, eventName, eventLocation, pointOfContact,merchandiseCost, totalParticipants, totalEventDays);
         this.merchandiseCost = merchandiseCost;
     }
 
@@ -35,10 +35,9 @@ public class MusicConcertEvent extends Event{
         this.musicConcertEventCost = musicConcertEventCost;
     }
 
-   
+    @Override
     public void calculateEventCost() {
-        super.calculateEventCost();
-        musicConcertEventCost = getEventCost() + (getmerchandiseCost() *  getTotalParticipants() * getTotalEventDays());
+         musicConcertEventCost = getEventCost() + (getmerchandiseCost() *  getTotalParticipants() * getTotalEventDays());
     }
 
   
