@@ -8,9 +8,9 @@ public class ConferenceEvent extends Event {
     private double dinnerCost;
     private double conferenceEventCost;
 
-    public ConferenceEvent(String eventID, String eventName, String eventLocation, String pointOfContact, int totalParticipants, int totalEventDays,
+    public ConferenceEvent(String eventID, String eventName, String eventLocation, String pointOfContact, double eventCost,int totalParticipants, int totalEventDays,
      double breakfastCost, double lunchCost, double dinnerCost) {
-        super(eventID, eventName, eventLocation, pointOfContact, totalParticipants, totalEventDays);
+        super(eventID, eventName, eventLocation,pointOfContact,eventCost,totalParticipants, totalEventDays);
         this.breakfastCost = breakfastCost;
         this.lunchCost = lunchCost;
         this.dinnerCost = dinnerCost;
